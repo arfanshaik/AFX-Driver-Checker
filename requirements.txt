@@ -1,34 +1,31 @@
 # AFX Driver Checker - Python Dependencies
-# Target platform: Windows 10 / Windows 11
+# Target: Windows 10 / Windows 11
 # Recommended Python: 3.10+
 
 # Core system monitoring
 psutil>=5.9.8
 
-# Windows integration (optional future upgrade)
+# Windows integration - optional
 # pywin32>=306
 # WMI>=1.5.1
 
-# Modern UI options (optional future upgrade)
+# Modern UI - optional
 # customtkinter>=5.2.2
 # pillow>=10.0.0
 
-# Data/reporting options (optional future upgrade)
+# Reports and data - optional
 # pandas>=2.0.0
 # openpyxl>=3.1.0
 
-# Visualization options (optional future upgrade)
+# Charts - optional
 # matplotlib>=3.8.0
 
-# Packaging options (optional for EXE builds)
+# EXE packaging - optional
 # pyinstaller>=6.0.0
 
-# Development / quality tools
+# Development tools - optional
 # pytest>=8.0.0
 # black>=24.0.0
 # ruff>=0.5.0
-# mypy>=1.10.0
 
-# Note:
-# Uncomment only the optional packages you actually use.
-# Keeping unused packages disabled keeps installs faster and safer.
+# Uncomment optional packages only when the project uses them.
