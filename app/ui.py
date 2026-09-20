@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk, filedialog, messagebox
 from pathlib import Path
+import psutil
 
 from app.scanner import scan_drivers
 from app.analyzer import analyze_driver
@@ -40,7 +41,15 @@ class DriverCheckerApp:
             page,
             text="Inspect installed Windows drivers safely — no random driver downloads.",
             font=("Segoe UI", 10)
-        ).pack(anchor="w", pady=(4, 12))
+        ).pack(anchor="w", pady=(4, 6))
+
+        memory = psutil.virtual_memory()
+        system_text = (
+            f"CPU threads: {psutil.cpu_count(logical=True) or 0}   •   "
+            f"RAM: {memory.total / (1024 ** 3):.1f} GB   •   "
+            f"Memory usage: {memory.percent:.0f}%"
+        )
+        ttk.Label(page, text=system_text, font=("Segoe UI", 9)).pack(anchor="w", pady=(0, 12))
 
         controls = ttk.Frame(page)
         controls.pack(fill="x", pady=(0, 10))
