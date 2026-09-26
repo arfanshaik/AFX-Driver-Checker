@@ -123,4 +123,5 @@ This is only a **review signal**, not a recommendation to replace the driver.
 ## License
 
 MIT
-lINK:afxapichecker.netlify.app
+
+lINK: afxapichecker.netlify.app
